@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+/* ============================================
+   THEME TOKENS — Monochrome Grayscale System
+   ============================================ */
+@theme inline {
+  /* Font */
+  --font-sans: var(--font-inter);
+
+  /* Monochrome Base Palette */
+  --color-base-950: #0a0a0a;
+  --color-base-900: #141414;
+  --color-base-800: #1f1f1f;
+  --color-base-700: #2e2e2e;
+  --color-base-600: #4a4a4a;
+  --color-base-500: #6b6b6b;
+  --color-base-400: #9a9a9a;
+  --color-base-300: #c4c4c4;
+  --color-base-200: #e0e0e0;
+  --color-base-100: #f0f0f0;
+  --color-base-50:  #fafafa;
+}
+
+/* ============================================
+   CSS VARIABLES — Dark / Light Mode
+   ============================================ */
+:root {
+  --bg:        #fafafa;
+  --bg-sub:    #f0f0f0;
+  --bg-card:   #ffffff;
+  --border:    #e0e0e0;
+  --text-hi:   #0a0a0a;
+  --text-md:   #2e2e2e;
+  --text-lo:   #6b6b6b;
+  --text-dim:  #9a9a9a;
+}
+
+.dark {
+  --bg:        #0a0a0a;
+  --bg-sub:    #141414;
+  --bg-card:   #1f1f1f;
+  --border:    #2e2e2e;
+  --text-hi:   #fafafa;
+  --text-md:   #e0e0e0;
+  --text-lo:   #9a9a9a;
+  --text-dim:  #6b6b6b;
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-hi);
+  font-family: var(--font-inter, system-ui, sans-serif);
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Section wrapper */
+.section-container {
+  max-width: 72rem; /* max-w-6xl */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* Section label (uppercase badge) */
+.section-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+/* Thin border utility */
+.border-subtle {
+  border-color: var(--border);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+/* Marquee keyframe */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid var(--text-lo);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
