@@ -30,8 +30,8 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
-          ? "backdrop-blur-md border-b border-[var(--border)]"
-          : "bg-transparent"
+        ? "backdrop-blur-md border-b border-[var(--border)]"
+        : "bg-transparent"
         }`}
       style={{
         backgroundColor: scrolled ? "color-mix(in srgb, var(--bg) 85%, transparent)" : "transparent",
@@ -65,7 +65,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             {/* Open to work badge */}
             <span className="hidden sm:flex items-center gap-1.5 text-xs text-[var(--text-dim)] border border-[var(--border)] rounded-full px-3 py-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-[var(--text-lo)] animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
               Open to Internship
             </span>
 

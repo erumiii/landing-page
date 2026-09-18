@@ -81,6 +81,7 @@ export default function Hero() {
             Keenan
             <br />
             <span className="text-[var(--text-lo)]">Muhammad</span>
+            <br />
             <span className="text-[var(--text-lo)]">Otthmar</span>
             <br />
             Emzed
