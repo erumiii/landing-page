@@ -24,19 +24,19 @@ const LinkedInIcon = ({ size = 16 }: { size?: number }) => (
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
-  show:   { opacity: 1, y: 0 },
+  show: { opacity: 1, y: 0 },
 };
 
 const stagger = {
   hidden: {},
-  show:   { transition: { staggerChildren: 0.1, delayChildren: 0.15 } },
+  show: { transition: { staggerChildren: 0.1, delayChildren: 0.15 } },
 };
 
 const stats = [
-  { value: "3",        label: "Cloud & Infra\nProjects" },
-  { value: "3.58",     label: "GPA\n(of 4.00)" },
-  { value: "2024",     label: "Started at\nBINUS" },
-  { value: "EN / ID",  label: "Bilingual\nProficiency" },
+  { value: "3", label: "Cloud & Infra\nProjects" },
+  { value: "3.58", label: "GPA\n(of 4.00)" },
+  { value: "2024", label: "Started at\nBINUS" },
+  { value: "EN / ID", label: "Bilingual\nProficiency" },
 ];
 
 const techStack = [
@@ -81,6 +81,7 @@ export default function Hero() {
             Keenan
             <br />
             <span className="text-[var(--text-lo)]">Muhammad</span>
+            <span className="text-[var(--text-lo)]">Otthmar</span>
             <br />
             Emzed
           </motion.h1>
