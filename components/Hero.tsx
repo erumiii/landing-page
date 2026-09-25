@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, ChevronRight } from "lucide-react";
+import { ArrowDown, ChevronRight, Download } from "lucide-react";
 
 // LinkedIn icon (lucide-react doesn't export it in this version)
 const LinkedInIcon = ({ size = 16 }: { size?: number }) => (
@@ -134,6 +134,16 @@ export default function Hero() {
             >
               <LinkedInIcon size={16} />
               <span>linkedin.com/in/keenanemzed</span>
+            </a>
+            <a
+              href="/Keenan_Muhammad_Otthmar_Emzed_Resume_2026-09-25.pdf"
+              download
+              id="hero-cv-download"
+              aria-label="Download CV"
+              className="flex items-center gap-2 text-sm text-[var(--text-dim)] hover:text-[var(--text-hi)] transition-colors"
+            >
+              <Download size={16} />
+              <span>Download CV</span>
             </a>
           </motion.div>
 
