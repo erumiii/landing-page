@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { GraduationCap, Award } from "lucide-react";
 
@@ -65,33 +66,6 @@ const timeline = [
   },
 ];
 
-/* Simple monochrome avatar SVG */
-function ProfileAvatar() {
-  return (
-    <svg
-      viewBox="0 0 160 160"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="w-full h-full"
-      aria-hidden="true"
-    >
-      <rect width="160" height="160" fill="var(--bg-sub)" />
-      {/* Grid lines */}
-      {[0,32,64,96,128,160].map(v => (
-        <line key={`h${v}`} x1="0" y1={v} x2="160" y2={v} stroke="var(--border)" strokeWidth="0.5" />
-      ))}
-      {[0,32,64,96,128,160].map(v => (
-        <line key={`v${v}`} x1={v} y1="0" x2={v} y2="160" stroke="var(--border)" strokeWidth="0.5" />
-      ))}
-      {/* Body silhouette */}
-      <ellipse cx="80" cy="68" rx="24" ry="28" fill="var(--text-dim)" />
-      <ellipse cx="80" cy="140" rx="48" ry="36" fill="var(--text-dim)" />
-      {/* Inner highlight */}
-      <ellipse cx="80" cy="65" rx="14" ry="18" fill="var(--text-lo)" />
-    </svg>
-  );
-}
-
 export default function AboutSection() {
   return (
     <section id="about" aria-labelledby="about-heading" className="py-24 md:py-32 border-t border-[var(--border)]">
@@ -125,8 +99,14 @@ export default function AboutSection() {
             className="lg:col-span-4 flex flex-col gap-6"
           >
             {/* Avatar */}
-            <div className="w-40 h-40 rounded-2xl overflow-hidden border border-[var(--border)] flex-shrink-0">
-              <ProfileAvatar />
+            <div className="relative w-40 h-40 rounded-2xl overflow-hidden border border-[var(--border)] flex-shrink-0">
+              <Image
+                src="/profile-picture.jpg"
+                alt="Foto profil Keenan Muhammad Otthmar Emzed"
+                fill
+                sizes="160px"
+                className="object-cover"
+              />
             </div>
 
             {/* Name + role */}

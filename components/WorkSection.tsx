@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Cloud, Bot, Server } from "lucide-react";
+import { Cloud } from "lucide-react";
 import ProjectCard from "./ProjectCard";
 
 const stagger = {
@@ -35,7 +35,7 @@ const projects = [
     ],
     category: "AI / RAG",
     year:     "2026",
-    icon:     <Bot size={52} strokeWidth={1} />,
+    image:    "/faq-chatbot-project-thumbnail.png",
   },
   {
     title:       "Infrastructure Design for Company Migration",
@@ -49,7 +49,7 @@ const projects = [
     ],
     category: "Cloud Architecture",
     year:     "2025",
-    icon:     <Server size={52} strokeWidth={1} />,
+    image:    "/infrastructure-design-for-company-migration-project-thumbnail.png",
   },
 ];
 
@@ -84,10 +84,9 @@ export default function WorkSection() {
           viewport={{ once: true, margin: "-80px" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <ProjectCard
               key={project.title}
-              index={index + 1}
               {...project}
             />
           ))}
