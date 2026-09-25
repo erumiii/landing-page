@@ -36,6 +36,7 @@ const projects = [
     category: "AI / RAG",
     year:     "2026",
     image:    "/faq-chatbot-project-thumbnail.png",
+    link:     "https://app.notion.com/p/Cafe-FAQ-Chatbot-using-RAG-3df6cb0763ea80d18e7be94a284fe451?source=copy_link",
   },
   {
     title:       "Infrastructure Design for Company Migration",
@@ -50,6 +51,7 @@ const projects = [
     category: "Cloud Architecture",
     year:     "2025",
     image:    "/infrastructure-design-for-company-migration-project-thumbnail.png",
+    link:     "https://app.notion.com/p/Infrastructure-Design-for-Company-Migration-3db6cb0763ea805ab734f9e0e10a9d8e?source=copy_link",
   },
 ];
 
@@ -84,12 +86,22 @@ export default function WorkSection() {
           viewport={{ once: true, margin: "-80px" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {projects.map((project) => (
-            <ProjectCard
-              key={project.title}
-              {...project}
-            />
-          ))}
+          {projects.map((project) => {
+            const card = <ProjectCard key={project.title} {...project} />;
+            return project.link ? (
+              <a
+                key={project.title}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block h-full"
+              >
+                {card}
+              </a>
+            ) : (
+              card
+            );
+          })}
         </motion.div>
 
         {/* Note */}

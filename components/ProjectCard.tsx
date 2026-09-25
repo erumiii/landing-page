@@ -11,6 +11,7 @@ interface ProjectCardProps {
   year:        string;
   icon?:       React.ReactNode;
   image?:      string;
+  link?:       string;
 }
 
 const fadeUp = {
@@ -30,7 +31,7 @@ export default function ProjectCard({
   return (
     <motion.article
       variants={fadeUp}
-      className="group relative flex flex-col bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl overflow-hidden hover:border-[var(--text-lo)] transition-all duration-300 hover:-translate-y-1"
+      className="group relative flex h-full flex-col bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl overflow-hidden hover:border-[var(--text-lo)] transition-all duration-300 hover:-translate-y-1"
       aria-label={`Project: ${title}`}
     >
       {/* Visual / Thumbnail area */}
