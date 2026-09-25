@@ -9,9 +9,9 @@ interface ProjectCardProps {
   bullets:     string[];
   category:    string;
   year:        string;
-  icon?:       React.ReactNode;
-  image?:      string;
+  image:       string;
   link?:       string;
+  wip?:        boolean;
 }
 
 const fadeUp = {
@@ -25,8 +25,9 @@ export default function ProjectCard({
   bullets,
   category,
   year,
-  icon,
   image,
+  link,
+  wip,
 }: ProjectCardProps) {
   return (
     <motion.article
@@ -34,42 +35,34 @@ export default function ProjectCard({
       className="group relative flex h-full flex-col bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl overflow-hidden hover:border-[var(--text-lo)] transition-all duration-300 hover:-translate-y-1"
       aria-label={`Project: ${title}`}
     >
-      {/* Visual / Thumbnail area */}
-      <div className="relative h-48 bg-[var(--bg-sub)] flex items-center justify-center overflow-hidden">
-        {image ? (
-          <Image
-            src={image}
-            alt={`Thumbnail proyek ${title}`}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover"
-          />
-        ) : (
-          <>
-            {/* Grid pattern */}
-            <div
-              className="absolute inset-0 opacity-20"
-              style={{
-                backgroundImage:
-                  "linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px)",
-                backgroundSize: "32px 32px",
-              }}
-            />
-            {/* Icon */}
-            <div className="relative z-10 text-[var(--text-lo)] group-hover:text-[var(--text-hi)] transition-colors duration-300 scale-100 group-hover:scale-110 transition-transform">
-              {icon}
-            </div>
-          </>
-        )}
+      {/* Thumbnail */}
+      <div className="relative h-48 bg-[var(--bg-sub)] overflow-hidden">
+        <Image
+          src={image}
+          alt={`Thumbnail proyek ${title}`}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover"
+        />
       </div>
 
       {/* Content */}
       <div className="flex flex-col gap-4 p-6 flex-1">
         {/* Category + Year */}
         <div className="flex items-center justify-between">
-          <span className="text-xs font-medium tracking-wider uppercase text-[var(--text-dim)] border border-[var(--border)] rounded-full px-3 py-1">
-            {category}
-          </span>
+          <div className="flex items-center gap-2">
+            <span className="text-xs font-medium tracking-wider uppercase text-[var(--text-dim)] border border-[var(--border)] rounded-full px-3 py-1">
+              {category}
+            </span>
+            {wip && (
+              <span
+                className="text-xs font-medium tracking-wider uppercase text-[var(--text-dim)] border border-dashed border-[var(--border)] rounded-full px-3 py-1"
+                title="Work In Progress"
+              >
+                WIP — Work In Progress
+              </span>
+            )}
+          </div>
           <span className="text-xs text-[var(--text-dim)]">{year}</span>
         </div>
 

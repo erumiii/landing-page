@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Cloud } from "lucide-react";
 import ProjectCard from "./ProjectCard";
 
 const stagger = {
@@ -22,7 +21,8 @@ const projects = [
     ],
     category: "Cloud Architecture",
     year:     "2026",
-    icon:     <Cloud size={52} strokeWidth={1} />,
+    image:    "/psychologist-appointment-booking-website-project-thumbnail.png",
+    wip:      true,
   },
   {
     title:       "Cafe FAQ Chatbot using RAG",
