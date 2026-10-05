@@ -59,7 +59,7 @@ export default function ProjectCard({
                 className="text-xs font-medium tracking-wider uppercase text-[var(--text-dim)] border border-dashed border-[var(--border)] rounded-full px-3 py-1"
                 title="Work In Progress"
               >
-                WIP — Work In Progress
+                WIP
               </span>
             )}
           </div>

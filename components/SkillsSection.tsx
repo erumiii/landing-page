@@ -19,7 +19,7 @@ const categories = [
   },
   {
     title: "Infrastructure & Tools",
-    items: ["Docker", "Linux", "Git"],
+    items: ["Docker", "Linux", "Git", "GitHub"],
   },
   {
     title: "Database",
@@ -28,17 +28,6 @@ const categories = [
   {
     title: "Programming Languages",
     items: ["Python", "PHP", "Bash / Shell Scripting"],
-  },
-  {
-    title: "Cloud Services",
-    items: [
-      "ECS / Fargate",
-      "RDS Multi-AZ",
-      "CloudWatch & SNS",
-      "IAM & Security",
-      "ECR",
-      "Terraform (IaC)",
-    ],
   },
   {
     title: "Languages",
@@ -125,7 +114,7 @@ export default function SkillsSection() {
             Currently Learning / Exploring
           </p>
           <div className="flex flex-wrap gap-2">
-            {["Nginx", "Proxmox", "Kubernetes", "Terraform", "CI/CD Pipelines", "Cloud Security"].map((item) => (
+            {["Kubernetes", "Terraform", "CI/CD Pipelines"].map((item) => (
               <span
                 key={item}
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs text-[var(--text-dim)] border border-dashed border-[var(--border)] rounded-lg"

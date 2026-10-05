@@ -39,7 +39,7 @@ const projects = [
     link:     "https://app.notion.com/p/Cafe-FAQ-Chatbot-using-RAG-3df6cb0763ea80d18e7be94a284fe451?source=copy_link",
   },
   {
-    title:       "Infrastructure Design for Company Migration",
+    title:       "Infrastructure Diagram for Company Migration",
     description:
       "Perancangan infrastruktur AWS untuk migrasi perusahaan ke cloud, berfokus pada skalabilitas, high availability, monitoring, dan anggaran bulanan.",
     bullets: [
