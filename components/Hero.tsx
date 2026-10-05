@@ -136,7 +136,7 @@ export default function Hero() {
               <span>linkedin.com/in/keenanemzed</span>
             </a>
             <a
-              href="/Keenan_Muhammad_Otthmar_Emzed_Resume_2026-09-25.pdf"
+              href="/Keenan_Muhammad_Otthmar_Emzed_Resume_2026-10-05.pdf"
               download
               id="hero-cv-download"
               aria-label="Download CV"
