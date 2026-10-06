@@ -12,8 +12,8 @@ export default function Page() {
       <Navbar />
       <main id="main-content">
         <Hero />
-        <WorkSection />
         <AboutSection />
+        <WorkSection />
         <SkillsSection />
         <ContactSection />
       </main>

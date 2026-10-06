@@ -41,12 +41,11 @@ const projects = [
   {
     title:       "Infrastructure Diagram for Company Migration",
     description:
-      "Perancangan infrastruktur AWS untuk migrasi perusahaan ke cloud, berfokus pada skalabilitas, high availability, monitoring, dan anggaran bulanan.",
+      "Perancangan infrastruktur AWS untuk migrasi perusahaan ke cloud, berfokus pada skalabilitas dan high availability.",
     bullets: [
-      "ECS Fargate + Service Auto Scaling untuk traffic spikes",
+      "ECS + Fargate + Application Load Balancer untuk traffic spikes",
       "RDS Multi-AZ, ECR, CloudWatch, SNS, IAM",
-      "CI/CD dengan GitHub + Jenkins untuk Docker image build",
-      "Evaluasi beban kerja terhadap batasan budget bulanan",
+      "CI/CD dengan GitLab yang terhubung dengan ECR"
     ],
     category: "Cloud Architecture",
     year:     "2025",
@@ -67,7 +66,7 @@ export default function WorkSection() {
           transition={{ duration: 0.5 }}
           className="mb-16"
         >
-          <p className="section-label mb-4">01 — Selected Work</p>
+          <p className="section-label mb-4">02 — Selected Work</p>
           <h2
             id="work-heading"
             className="text-3xl md:text-5xl font-bold text-[var(--text-hi)] tracking-tight"

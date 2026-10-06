@@ -78,7 +78,7 @@ export default function AboutSection() {
           transition={{ duration: 0.5 }}
           className="mb-16"
         >
-          <p className="section-label mb-4">02 — About</p>
+          <p className="section-label mb-4">01 — About</p>
           <h2
             id="about-heading"
             className="text-3xl md:text-5xl font-bold text-[var(--text-hi)] tracking-tight"
