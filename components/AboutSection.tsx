@@ -68,7 +68,7 @@ const timeline = [
 
 export default function AboutSection() {
   return (
-    <section id="about" aria-labelledby="about-heading" className="py-24 md:py-32 border-t border-[var(--border)]">
+    <section id="about" aria-labelledby="about-heading" className="py-24 md:py-32">
       <div className="section-container">
         {/* Section header */}
         <motion.div

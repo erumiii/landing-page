@@ -41,8 +41,8 @@ const stats = [
 
 const techStack = [
   "GCP", "AWS", "Docker", "Linux", "Git",
-  "Python", "PHP", "MySQL", "Terraform", "CI/CD",
-  "Bash", "Nginx", "ECS", "CloudWatch", "IAM",
+  "Python", "PHP", "MySQL", "CI/CD",
+  "Bash",
 ];
 
 export default function Hero() {
@@ -177,7 +177,7 @@ export default function Hero() {
         aria-label="Tech stack marquee"
       >
         <div className="animate-marquee">
-          {[...techStack, ...techStack].map((tech, i) => (
+          {[...techStack, ...techStack, ...techStack, ...techStack].map((tech, i) => (
             <span
               key={`${tech}-${i}`}
               className="inline-flex items-center gap-6 mx-6 text-sm font-medium text-[var(--text-dim)] uppercase tracking-widest whitespace-nowrap"

@@ -56,7 +56,7 @@ const projects = [
 
 export default function WorkSection() {
   return (
-    <section id="work" aria-labelledby="work-heading" className="py-24 md:py-32">
+    <section id="work" aria-labelledby="work-heading" className="py-24 md:py-32 border-t border-[var(--border)]">
       <div className="section-container">
         {/* Section header */}
         <motion.div
