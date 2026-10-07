@@ -126,10 +126,9 @@ export default function AboutSection() {
             <div className="flex flex-col gap-4 text-sm text-[var(--text-lo)] leading-relaxed">
               <p>
                 Saya adalah mahasiswa Computer Science yang tertarik terhadap
-                <strong className="text-[var(--text-md)] font-medium"> cloud computing</strong>,{" "}
-                <strong className="text-[var(--text-md)] font-medium">software infrastructure</strong>,
+                <strong className="text-[var(--text-md)] font-medium"> Cloud Computing</strong>,{" "}
                 dan{" "}
-                <strong className="text-[var(--text-md)] font-medium">system design</strong>.
+                <strong className="text-[var(--text-md)] font-medium">DevOps</strong>.
                 Dengan pengalaman praktis di platform AWS dan GCP, saya membangun fondasi yang kuat
                 untuk berkarier di bidang DevOps dan Cloud Engineering.
               </p>

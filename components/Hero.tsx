@@ -94,13 +94,12 @@ export default function Hero() {
           >
             Computer Science student di{" "}
             <span className="text-[var(--text-md)] font-medium">BINUS University</span>{" "}
-            yang fokus pada{" "}
+            yang tertarik terhadap{" "}
             <span className="text-[var(--text-md)] font-medium">
-              cloud computing, software infrastructure,
+              cloud computing
             </span>{" "}
             dan{" "}
-            <span className="text-[var(--text-md)] font-medium">system design</span>.
-            Membangun pengalaman di DevOps dan Cloud Engineering.
+            <span className="text-[var(--text-md)] font-medium">DevOps</span>.
           </motion.p>
 
           {/* CTAs */}
