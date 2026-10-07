@@ -2,10 +2,12 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 interface ProjectCardProps {
   title:       string;
   description: string;
+  direction?:  string;
   bullets:     string[];
   category:    string;
   year:        string;
@@ -22,6 +24,7 @@ const fadeUp = {
 export default function ProjectCard({
   title,
   description,
+  direction,
   bullets,
   category,
   year,
@@ -32,14 +35,14 @@ export default function ProjectCard({
   return (
     <motion.article
       variants={fadeUp}
-      className="group relative flex h-full flex-col bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl overflow-hidden hover:border-[var(--text-lo)] transition-all duration-300 hover:-translate-y-1"
+      className="relative flex h-full flex-col bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl overflow-hidden hover:border-[var(--text-lo)] transition-all duration-300 hover:-translate-y-1"
       aria-label={`Project: ${title}`}
     >
       {/* Thumbnail */}
       <div className="relative h-48 bg-[var(--bg-sub)] overflow-hidden">
         <Image
           src={image}
-          alt={`Thumbnail proyek ${title}`}
+          alt={`${title} project thumbnail`}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover"
@@ -73,6 +76,23 @@ export default function ProjectCard({
 
         {/* Description */}
         <p className="text-sm text-[var(--text-lo)] leading-relaxed">{description}</p>
+
+        {/* Direction (CTA) — hanya untuk proyek berlink */}
+        {link && direction && (
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group/link inline-flex w-fit items-center gap-1.5 text-sm font-medium text-[var(--text-md)] hover:text-[var(--text-hi)] transition-colors"
+          >
+            {direction}
+            <ArrowRight
+              size={16}
+              className="transition-transform duration-300 group-hover/link:translate-x-1"
+            />
+          </a>
+        )}
+
 
         {/* Bullet points */}
         <ul className="flex flex-col gap-2 mt-auto pt-2 border-t border-[var(--border)]">

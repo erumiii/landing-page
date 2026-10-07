@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description:
       "Computer Science student focused on cloud computing, DevOps, and Cloud Architecture.",
     type: "website",
-    locale: "id_ID",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
@@ -44,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="id" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} min-h-full flex flex-col antialiased`}>
         <ThemeProvider>{children}</ThemeProvider>
       </body>

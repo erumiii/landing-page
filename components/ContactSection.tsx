@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, ArrowUpRight } from "lucide-react";
+import { Mail, ArrowUpRight, Send, Download } from "lucide-react";
 
 // LinkedIn icon (not exported in this version of lucide-react)
 const LinkedInIcon = ({ size = 16 }: { size?: number }) => (
@@ -22,6 +22,24 @@ const LinkedInIcon = ({ size = 16 }: { size?: number }) => (
   </svg>
 );
 
+// GitHub icon (not exported in this version of lucide-react)
+const GitHubIcon = ({ size = 16 }: { size?: number }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
+    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+    <path d="M9 18c-4.51 2-5-2-7-2" />
+  </svg>
+);
+
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } },
@@ -31,6 +49,33 @@ const stagger = {
   hidden: {},
   show: { transition: { staggerChildren: 0.1, delayChildren: 0.1 } },
 };
+
+const contacts = [
+  {
+    icon: <Mail size={18} />,
+    title: "Email",
+    subtitle: "keenanemzed202@gmail.com",
+    href: "mailto:keenanemzed202@gmail.com",
+    id: "contact-email-link",
+    external: false,
+  },
+  {
+    icon: <LinkedInIcon size={18} />,
+    title: "LinkedIn",
+    subtitle: "linkedin.com/in/keenanemzed",
+    href: "https://linkedin.com/in/keenanemzed",
+    id: "contact-linkedin",
+    external: true,
+  },
+  {
+    icon: <GitHubIcon size={18} />,
+    title: "GitHub",
+    subtitle: "github.com/erumiii",
+    href: "https://github.com/erumiii",
+    id: "contact-github",
+    external: true,
+  },
+];
 
 export default function ContactSection() {
   return (
@@ -45,86 +90,81 @@ export default function ContactSection() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-80px" }}
-          className="max-w-3xl"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16"
         >
-          {/* Label */}
-          <motion.p variants={fadeUp} className="section-label mb-6">
-            04 — Contact
-          </motion.p>
+          {/* Left: heading + CTA */}
+          <div>
+            <motion.p variants={fadeUp} className="section-label mb-6">
+              04 — Contact
+            </motion.p>
 
-          {/* Heading */}
-          <motion.h2
-            variants={fadeUp}
-            id="contact-heading"
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-[var(--text-hi)] tracking-tight leading-tight mb-6"
-          >
-            Mari
-            <br />
-            <span className="text-[var(--text-lo)]">Terhubung</span>
-          </motion.h2>
-
-          {/* Body */}
-          <motion.p
-            variants={fadeUp}
-            className="text-base md:text-lg text-[var(--text-lo)] leading-relaxed mb-10 max-w-xl"
-          >
-            Terbuka untuk kesempatan{" "}
-            <strong className="text-[var(--text-md)] font-medium">magang (internship)</strong> di
-            bidang{" "}
-            <strong className="text-[var(--text-md)] font-medium">
-              Cloud Engineering &amp; DevOps
-            </strong>
-            . Punya proyek atau ingin berdiskusi? Jangan ragu untuk menghubungi saya lewat email.
-          </motion.p>
-
-          {/* Email CTA — displayed large */}
-          <motion.div variants={fadeUp} className="mb-10">
-            <a
-              href="mailto:keenan.emzed@binus.ac.id"
-              id="contact-email-link"
-              aria-label="Send email to keenan.emzed@binus.ac.id"
-              className="group inline-flex items-center gap-3 text-xl sm:text-2xl md:text-3xl font-semibold text-[var(--text-hi)] hover:text-[var(--text-lo)] transition-colors border-b border-[var(--border)] pb-2 hover:border-[var(--text-lo)]"
+            <motion.h2
+              variants={fadeUp}
+              id="contact-heading"
+              className="text-4xl sm:text-5xl md:text-6xl font-bold text-[var(--text-hi)] tracking-tight leading-tight mb-6"
             >
-              <Mail
-                size={28}
-                className="text-[var(--text-lo)] group-hover:text-[var(--text-hi)] transition-colors"
-              />
-              keenan.emzed@binus.ac.id
-              <ArrowUpRight
-                size={20}
-                className="text-[var(--text-dim)] group-hover:text-[var(--text-hi)] transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-              />
-            </a>
-          </motion.div>
+              Let's
+              <br />
+              <span className="text-[var(--text-lo)]">Connect</span>
+            </motion.h2>
 
-          {/* Social links */}
-          <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
-            <a
-              href="https://linkedin.com/in/keenanemzed"
-              target="_blank"
-              rel="noopener noreferrer"
-              id="contact-linkedin"
-              aria-label="LinkedIn profile"
-              className="group flex items-center gap-2.5 px-5 py-3 rounded-xl border border-[var(--border)] text-sm text-[var(--text-lo)] hover:border-[var(--text-hi)] hover:text-[var(--text-hi)] transition-all"
+            <motion.p
+              variants={fadeUp}
+              className="text-base md:text-lg text-[var(--text-lo)] leading-relaxed mb-10 max-w-xl"
             >
-              <LinkedInIcon size={16} />
-              <span>LinkedIn</span>
-              <ArrowUpRight
-                size={14}
-                className="text-[var(--text-dim)] group-hover:text-[var(--text-hi)] transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-              />
-            </a>
-          </motion.div>
+              Open to{" "}
+              <strong className="text-[var(--text-md)] font-medium">internship</strong> opportunities
+              in{" "}
+              <strong className="text-[var(--text-md)] font-medium">
+                Cloud Engineering &amp; DevOps Engineering
+              </strong>
+              .
+            </motion.p>
+          </div>
 
-          {/* Divider decoration */}
-          <motion.div
-            variants={fadeUp}
-            className="mt-20 pt-8 border-t border-[var(--border)]"
-          >
-            <p className="text-xs text-[var(--text-dim)]">
-              Bandung, Indonesia &nbsp;·&nbsp; (+62) 821-9195-7782
-            </p>
-          </motion.div>
+          {/* Right: contact cards */}
+          <div className="flex flex-col justify-center">
+            {contacts.map((c) => (
+              <motion.div key={c.title} variants={fadeUp}>
+                <a
+                  href={c.href}
+                  {...(c.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                  id={c.id}
+                  aria-label={`${c.title}: ${c.subtitle}`}
+                  className="group flex items-center gap-4 py-5 border-b border-[var(--border)]"
+                >
+                  <span className="flex items-center justify-center w-11 h-11 rounded-lg border border-[var(--border)] text-[var(--text-lo)] group-hover:text-[var(--text-hi)] group-hover:border-[var(--text-lo)] transition-all shrink-0">
+                    {c.icon}
+                  </span>
+                  <span className="flex-1 min-w-0">
+                    <span className="block text-sm font-semibold text-[var(--text-hi)]">
+                      {c.title}
+                    </span>
+                    <span className="block text-xs text-[var(--text-dim)] mt-0.5 truncate">
+                      {c.subtitle}
+                    </span>
+                  </span>
+                  <ArrowUpRight
+                    size={18}
+                    className="text-[var(--text-dim)] group-hover:text-[var(--text-hi)] transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 shrink-0"
+                  />
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Divider decoration */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="mt-20 pt-8 border-t border-[var(--border)]"
+        >
+          <p className="text-xs text-[var(--text-dim)]">
+            Bandung, Indonesia &nbsp;·&nbsp; (+62) 821-9195-7782
+          </p>
         </motion.div>
       </div>
     </section>

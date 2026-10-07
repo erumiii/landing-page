@@ -92,13 +92,13 @@ export default function Hero() {
             variants={fadeUp}
             className="text-base md:text-lg text-[var(--text-lo)] leading-relaxed max-w-2xl mb-10"
           >
-            Computer Science student di{" "}
+            Computer Science student at{" "}
             <span className="text-[var(--text-md)] font-medium">BINUS University</span>{" "}
-            yang tertarik terhadap{" "}
+            with a strong interest in{" "}
             <span className="text-[var(--text-md)] font-medium">
               cloud computing
             </span>{" "}
-            dan{" "}
+            and{" "}
             <span className="text-[var(--text-md)] font-medium">DevOps</span>.
           </motion.p>
 
@@ -109,40 +109,17 @@ export default function Hero() {
               id="hero-cta-work"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[var(--text-hi)] text-[var(--bg)] text-sm font-semibold hover:opacity-80 transition-opacity"
             >
-              Lihat Proyek Saya
+              View My Projects
               <ChevronRight size={16} />
             </a>
             <a
-              href="mailto:keenan.emzed@binus.ac.id"
-              id="hero-cta-email"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-[var(--border)] text-[var(--text-md)] text-sm font-medium hover:border-[var(--text-hi)] hover:text-[var(--text-hi)] transition-all"
-            >
-              Hubungi Saya
-            </a>
-          </motion.div>
-
-          {/* Social */}
-          <motion.div variants={fadeUp} className="flex items-center gap-4 mb-16">
-            <a
-              href="https://linkedin.com/in/keenanemzed"
-              target="_blank"
-              rel="noopener noreferrer"
-              id="hero-linkedin"
-              aria-label="LinkedIn profile"
-              className="flex items-center gap-2 text-sm text-[var(--text-dim)] hover:text-[var(--text-hi)] transition-colors"
-            >
-              <LinkedInIcon size={16} />
-              <span>linkedin.com/in/keenanemzed</span>
-            </a>
-            <a
               href="/Keenan_Muhammad_Otthmar_Emzed_Resume_2026-10-06.pdf"
-              download
               id="hero-cv-download"
               aria-label="Download CV"
-              className="flex items-center gap-2 text-sm text-[var(--text-dim)] hover:text-[var(--text-hi)] transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-[var(--border)] text-[var(--text-md)] text-sm font-medium hover:border-[var(--text-hi)] hover:text-[var(--text-hi)] transition-all"
             >
               <Download size={16} />
-              <span>Download CV</span>
+              Download CV
             </a>
           </motion.div>
 
@@ -191,8 +168,8 @@ export default function Hero() {
       {/* Scroll arrow */}
       <div className="section-container flex justify-end py-6">
         <motion.a
-          href="#work"
-          aria-label="Scroll to work section"
+          href="#about"
+          aria-label="Scroll to about section"
           animate={{ y: [0, 6, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
           className="text-[var(--text-dim)] hover:text-[var(--text-hi)] transition-colors"

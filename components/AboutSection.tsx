@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { GraduationCap, Award } from "lucide-react";
+import { GraduationCap, Award, ArrowUpRight } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -32,8 +32,19 @@ const timeline = [
   },
   {
     type:        "cert",
+    title:       "Build an AI Agent",
+    org:         "IBM SkillsBuild",
+    period:      "Jun 2026",
+    description: "AI agent fundamentals & hands-on agent development",
+    bullets: [
+      "AI agent design & implementation",
+    ],
+    credential:  "https://www.credly.com/badges/8039c6c4-f64c-4f05-ac91-1649bd236390/public_url",
+  },
+  {
+    type:        "cert",
     title:       "Google Cloud Computing Foundations",
-    org:         "Google Skills",
+    org:         "Google Cloud",
     period:      "Feb 2026 — Jun 2026",
     description: "GCP Core Services, REST API, IaC, Cloud Observability",
     bullets: [
@@ -41,11 +52,12 @@ const timeline = [
       "REST API design & Infrastructure as Code",
       "Cloud Observability & Monitoring",
     ],
+    credential:  "https://www.credly.com/badges/139b9273-8f67-438f-b03e-33bc7e8ff502/public_url",
   },
   {
     type:        "cert",
-    title:       "AWS re/Start Program",
-    org:         "Orbit Future Academy",
+    title:       "AWS re/Start Graduate",
+    org:         "Amazon Web Services Training and Certification",
     period:      "Sep 2025 — Dec 2025",
     description: "AWS Core Services, Cloud Security, Linux, Bash & Python Scripting",
     bullets: [
@@ -53,6 +65,7 @@ const timeline = [
       "Cloud Security fundamentals",
       "Linux administration · Bash & Python scripting",
     ],
+    credential:  "https://www.credly.com/badges/8c70c9f7-7e44-4c4a-b025-7d8ed2c91acc/public_url",
   },
   {
     type:        "cert",
@@ -63,6 +76,7 @@ const timeline = [
     bullets: [
       "Cloud Computing concepts & GCP fundamentals",
     ],
+    credential:  "https://www.dicoding.com/certificates/72ZDKY1KLPYW",
   },
 ];
 
@@ -83,9 +97,8 @@ export default function AboutSection() {
             id="about-heading"
             className="text-3xl md:text-5xl font-bold text-[var(--text-hi)] tracking-tight"
           >
-            Tentang
-            <br />
-            <span className="text-[var(--text-lo)]">Saya</span>
+            About
+            <span className="text-[var(--text-lo)]"> Me</span>
           </h2>
         </motion.div>
 
@@ -102,7 +115,7 @@ export default function AboutSection() {
             <div className="relative w-40 h-40 rounded-2xl overflow-hidden border border-[var(--border)] flex-shrink-0">
               <Image
                 src="/profile-picture.jpg"
-                alt="Foto profil Keenan Muhammad Otthmar Emzed"
+                alt="Profile photo of Keenan Muhammad Otthmar Emzed"
                 fill
                 sizes="160px"
                 className="object-cover"
@@ -125,12 +138,12 @@ export default function AboutSection() {
             {/* Bio paragraphs */}
             <div className="flex flex-col gap-4 text-sm text-[var(--text-lo)] leading-relaxed">
               <p>
-                Saya adalah mahasiswa Computer Science yang tertarik terhadap
+                I am a Computer Science student interested in
                 <strong className="text-[var(--text-md)] font-medium"> Cloud Computing</strong>,{" "}
-                dan{" "}
+                and{" "}
                 <strong className="text-[var(--text-md)] font-medium">DevOps</strong>.
-                Dengan pengalaman praktis di platform AWS dan GCP, saya membangun fondasi yang kuat
-                untuk berkarier di bidang DevOps dan Cloud Engineering.
+                With hands-on experience across AWS and GCP, I am building a strong foundation
+                for a career in DevOps and Cloud Engineering.
               </p>
             </div>
           </motion.div>
@@ -144,7 +157,7 @@ export default function AboutSection() {
             className="lg:col-span-8"
           >
             <h3 className="text-xs font-medium tracking-widest uppercase text-[var(--text-dim)] mb-8">
-              Pendidikan &amp; Sertifikasi
+              Education &amp; Certifications
             </h3>
 
             <div className="relative">
@@ -168,7 +181,7 @@ export default function AboutSection() {
                     </div>
 
                     {/* Content */}
-                    <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-5 hover:border-[var(--text-lo)] transition-colors">
+                    <div className="relative bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-5 hover:border-[var(--text-lo)] transition-colors">
                       <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                         <div>
                           <h4 className="text-sm font-semibold text-[var(--text-hi)]">
@@ -188,7 +201,7 @@ export default function AboutSection() {
                         </div>
                       </div>
                       <p className="text-xs text-[var(--text-dim)] mb-3">{item.description}</p>
-                      <ul className="flex flex-col gap-1">
+                      <ul className="flex flex-col gap-1 pr-32">
                         {item.bullets.map((b, j) => (
                           <li
                             key={j}
@@ -199,6 +212,17 @@ export default function AboutSection() {
                           </li>
                         ))}
                       </ul>
+                      {item.credential && (
+                        <a
+                          href={item.credential}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="absolute bottom-5 right-5 inline-flex items-center gap-1 text-xs text-[var(--text-dim)] hover:text-[var(--text-hi)] transition-colors"
+                        >
+                          View Credential
+                          <ArrowUpRight size={12} />
+                        </a>
+                      )}
                     </div>
                   </motion.div>
                 ))}

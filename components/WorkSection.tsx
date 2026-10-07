@@ -12,11 +12,11 @@ const projects = [
   {
     title:       "Psychologist Appointment Booking Website",
     description:
-      "Aplikasi booking konsultasi psikolog dengan arsitektur hybrid cloud — Vercel untuk frontend dan Proxmox homelab untuk backend & database, dilengkapi chatbot RAG.",
+      "Psychologist consultation booking app with a hybrid cloud architecture — Vercel for the frontend and a Proxmox homelab for backend & database, powered by a RAG chatbot.",
     bullets: [
       "Hybrid cloud: Vercel PaaS + Proxmox homelab",
       "RAG pipeline: ingestion, embedding, retrieval, LLM context",
-      "CI/CD automation untuk workflow deployment",
+      "CI/CD automation for deployment workflow",
       "Service separation & cloud-to-on-premise connectivity",
     ],
     category: "Cloud Architecture",
@@ -27,11 +27,13 @@ const projects = [
   {
     title:       "Cafe FAQ Chatbot using RAG",
     description:
-      "Chatbot berbasis RAG (Retrieval-Augmented Generation) untuk menjawab pertanyaan umum seputar kafe, dibangun dalam Hacktiv8 × IBM SkillsBuild AI Agent Project.",
+      "RAG (Retrieval-Augmented Generation) chatbot that answers common cafe questions, built during the Hacktiv8 × IBM SkillsBuild AI Agent Project.",
+    direction:
+      "View documentation",
     bullets: [
       "Document ingestion & chunking pipeline",
-      "Embedding dan vector store retrieval",
-      "LLM context generation untuk jawaban akurat",
+      "Embedding & vector store retrieval",
+      "LLM context generation for accurate answers",
     ],
     category: "AI / RAG",
     year:     "2026",
@@ -41,11 +43,13 @@ const projects = [
   {
     title:       "Infrastructure Diagram for Company Migration",
     description:
-      "Perancangan infrastruktur AWS untuk migrasi perusahaan ke cloud, berfokus pada skalabilitas dan high availability.",
+      "AWS infrastructure design for enterprise cloud migration, focusing on scalability and high availability.",
+    direction:
+      "View documentation",
     bullets: [
-      "ECS + Fargate + Application Load Balancer untuk traffic spikes",
+      "ECS + Fargate + Application Load Balancer for traffic spikes",
       "RDS Multi-AZ, ECR, CloudWatch, SNS, IAM",
-      "CI/CD dengan GitLab yang terhubung dengan ECR"
+      "CI/CD with GitLab connected to ECR"
     ],
     category: "Cloud Architecture",
     year:     "2025",
@@ -71,9 +75,9 @@ export default function WorkSection() {
             id="work-heading"
             className="text-3xl md:text-5xl font-bold text-[var(--text-hi)] tracking-tight"
           >
-            Proyek &amp;
+            Projects &amp;
             <br />
-            <span className="text-[var(--text-lo)]">Infrastruktur</span>
+            <span className="text-[var(--text-lo)]">Infrastructure</span>
           </h2>
         </motion.div>
 
@@ -85,22 +89,12 @@ export default function WorkSection() {
           viewport={{ once: true, margin: "-80px" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {projects.map((project) => {
-            const card = <ProjectCard key={project.title} {...project} />;
-            return project.link ? (
-              <a
-                key={project.title}
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block h-full"
-              >
-                {card}
-              </a>
-            ) : (
-              card
-            );
-          })}
+          {projects.map((project) => (
+            <ProjectCard
+              key={project.title}
+              {...project}
+            />
+          ))}
         </motion.div>
 
         {/* Note */}
@@ -111,7 +105,7 @@ export default function WorkSection() {
           transition={{ delay: 0.4 }}
           className="mt-10 text-xs text-[var(--text-dim)] text-center"
         >
-          Semua proyek merupakan bagian dari program akademik &amp; pelatihan profesional.
+          All projects are part of academic programs &amp; professional training.
         </motion.p>
       </div>
     </section>

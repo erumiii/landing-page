@@ -81,15 +81,6 @@ export default function Navbar() {
               </button>
             )}
 
-            {/* CTA */}
-            <a
-              href="#contact"
-              id="nav-cta"
-              className="hidden sm:inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg border border-[var(--text-hi)] text-[var(--text-hi)] hover:bg-[var(--text-hi)] hover:text-[var(--bg)] transition-all duration-200"
-            >
-              Hubungi Saya
-            </a>
-
             {/* Mobile hamburger */}
             <button
               id="mobile-menu-toggle"
@@ -131,7 +122,7 @@ export default function Navbar() {
                 onClick={() => setMenuOpen(false)}
                 className="mt-2 inline-flex items-center justify-center px-4 py-2.5 text-sm font-medium rounded-lg border border-[var(--text-hi)] text-[var(--text-hi)] hover:bg-[var(--text-hi)] hover:text-[var(--bg)] transition-all"
               >
-                Hubungi Saya
+                Contact Me
               </a>
             </nav>
           </motion.div>

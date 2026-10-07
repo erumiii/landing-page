@@ -19,7 +19,7 @@ const categories = [
   },
   {
     title: "Infrastructure & Tools",
-    items: ["Docker", "Linux", "Git", "GitHub"],
+    items: ["Docker", "Linux", "Git", "GitHub", "CI/CD Pipelines"],
   },
   {
     title: "Database",
@@ -114,7 +114,7 @@ export default function SkillsSection() {
             Currently Learning / Exploring
           </p>
           <div className="flex flex-wrap gap-2">
-            {["Kubernetes", "Terraform", "CI/CD Pipelines", "Monitoring Tools"].map((item) => (
+            {["Kubernetes", "Terraform", "Monitoring Tools"].map((item) => (
               <span
                 key={item}
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs text-[var(--text-dim)] border border-dashed border-[var(--border)] rounded-lg"
