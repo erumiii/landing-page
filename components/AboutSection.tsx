@@ -125,20 +125,13 @@ export default function AboutSection() {
             {/* Bio paragraphs */}
             <div className="flex flex-col gap-4 text-sm text-[var(--text-lo)] leading-relaxed">
               <p>
-                Saya adalah mahasiswa Computer Science yang bersemangat terhadap
+                Saya adalah mahasiswa Computer Science yang tertarik terhadap
                 <strong className="text-[var(--text-md)] font-medium"> cloud computing</strong>,{" "}
                 <strong className="text-[var(--text-md)] font-medium">software infrastructure</strong>,
                 dan{" "}
                 <strong className="text-[var(--text-md)] font-medium">system design</strong>.
                 Dengan pengalaman praktis di platform AWS dan GCP, saya membangun fondasi yang kuat
-                untuk berkarier di bidang DevOps dan Cloud Architecture.
-              </p>
-              <p>
-                Saya percaya bahwa infrastruktur yang baik adalah pondasi dari produk yang andal.
-                Prinsip kerja saya: desain untuk{" "}
-                <em className="text-[var(--text-md)]">scalability</em>, bangun untuk{" "}
-                <em className="text-[var(--text-md)]">observability</em>, dan otomasi apa pun yang
-                bisa diotomasi.
+                untuk berkarier di bidang DevOps dan Cloud Engineering.
               </p>
             </div>
           </motion.div>

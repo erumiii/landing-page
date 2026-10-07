@@ -100,7 +100,7 @@ export default function Hero() {
             </span>{" "}
             dan{" "}
             <span className="text-[var(--text-md)] font-medium">system design</span>.
-            Membangun pengalaman di DevOps, Cloud Engineering, dan Cloud Architecture.
+            Membangun pengalaman di DevOps dan Cloud Engineering.
           </motion.p>
 
           {/* CTAs */}
