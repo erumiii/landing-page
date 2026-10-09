@@ -113,7 +113,7 @@ export default function Hero() {
               <ChevronRight size={16} />
             </a>
             <a
-              href="/Keenan_Muhammad_Otthmar_Emzed_Resume_2026-10-06.pdf"
+              href="/Keenan_Muhammad_Otthmar_Emzed_Resume_2026-10-09.pdf"
               id="hero-cv-download"
               aria-label="Download CV"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-[var(--border)] text-[var(--text-md)] text-sm font-medium hover:border-[var(--text-hi)] hover:text-[var(--text-hi)] transition-all"
