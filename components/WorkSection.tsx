@@ -10,6 +10,22 @@ const stagger = {
 
 const projects = [
   {
+    title:       "Peakscore",
+    description:
+      "A simple CRUD Academic Potential Test application that package into container and runs on WSL. This is a remake version of Web Based Programming final project.",
+    direction:
+      "View Repository",
+    bullets: [
+      "On-Premise deployment simulation using WSL",
+      "Equipping WSL with observability tools such as Prometheus + Grafana ",
+      "CI/CD automation for deployment workflow",
+    ],
+    category: "Cloud Architecture",
+    year:     "2026",
+    image: "/peakscore-project-thumbnail.png",
+    link: "https://github.com/erumiii/peakscore",
+  },
+  {
     title:       "Psychologist Appointment Booking Website",
     description:
       "Psychologist consultation booking app with a hybrid cloud architecture — Vercel for the frontend and a Proxmox homelab for backend & database, powered by a RAG chatbot.",
