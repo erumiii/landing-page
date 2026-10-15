@@ -33,7 +33,7 @@ const stagger = {
 };
 
 const stats = [
-  { value: "3", label: "Cloud & Infra\nProjects" },
+  { value: "4", label: "Cloud & Infra\nProjects" },
   { value: "3.58", label: "GPA\n(of 4.00)" },
   { value: "2024", label: "Started at\nBINUS" },
   { value: "EN / ID", label: "Bilingual\nProficiency" },
